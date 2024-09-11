@@ -1,0 +1,15 @@
+[1] hosting on git
+https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github
+https://www.theodinproject.com/lessons/foundations-setting-up-git#step-2-configure-git-and-github:~:text=Step%202.3%3A%20Create%20an%20SSH%20key
+https://www.theodinproject.com/lessons/foundations-git-basics
+
+[] best practices for puting variables on the root elment
+https://www.w3schools.com/css/css3_variables.asp
+
+[] the hamburger menu
+[] changing images per device
+[] how to connect fonts
+
+
+[] deployments
+[] how to type in md
