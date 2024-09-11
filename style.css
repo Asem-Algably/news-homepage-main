@@ -1,3 +1,34 @@
-body {
-    background-color: pink;
+:root{
+
+    /* main colors */
+    --soft-orange: hsl(35, 77%, 62%);
+    --soft-red: hsl(5, 85%, 63%);
+
+    /* neutral colors */
+    --body-bg: hsl(36, 100%, 99%);
+    --Grayish-blue: hsl(233, 8%, 79%);
+    --Dark-grayish-blue: hsl(236, 13%, 42%);
+    --Very-dark-blue: hsl(240, 100%, 5%);
+
+    /* font weights */
+    --regular: 400;
+    --bold: 700;
+    --extrabold: 800;
+
 }
+
+body {
+    background-color: var(--body-bg);
+}
+
+
+/* The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+
+### Font
+
+- Family: [Inter](https://fonts.google.com/specimen/Inter)
+- Weights: 400, 700, 800 */
