@@ -32,10 +32,27 @@
     box-sizing: border-box;
 }
 
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
 body {
     background-color: var(--body-bg);
     font-family: inter, Helvetica, sans-serif, Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
 }
+
+.wraper {
+    
+    max-width: calc(1112px + 2 * 5.5625rem);
+    padding: 5.5625rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 /* 
 ### Font
