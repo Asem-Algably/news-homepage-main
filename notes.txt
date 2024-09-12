@@ -13,8 +13,7 @@ https://www.w3schools.com/css/css3_fonts.asp
 https://stackoverflow.com/questions/30460681/changing-image-src-depending-on-screen-size
 
 [] the hamburger menu
-https://www.youtube.com/watch?v=aNDqzlAKmZc
-https://codepen.io/mutedblues/pen/MmPNPG?editors=1100
+https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci
 
 
 

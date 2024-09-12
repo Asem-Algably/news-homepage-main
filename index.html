@@ -18,7 +18,6 @@
 <body>
 
   <div class="wraper">
-  <head>
     <nav>
       <img src="./assets/images/logo.svg" alt="site logo" class="logo">
       <div class="nav_menu">
@@ -32,9 +31,8 @@
         </ul>
       </div>
     </nav>
-  </head>
   <main>
-    <div class="hero-image"></div>
+    <div class="hero-image wide-aspec-ratio"></div>
     <section class="hero-section">
       <h1>The Bright Future of Web 3.0?</h1>
       <div class="hero-copy">
@@ -93,5 +91,30 @@
     Coded by <a href="#">Asem Algably</a>.
   </div>
   </div>
+
+  <script>
+    function updateDivAspectRatio() {
+      const div = document.querySelector('.hero-image');
+      const width = div.offsetWidth;
+      const height = div.offsetHeight;
+      const aspectRatio = width / height;
+
+      // Remove any previous aspect-ratio class
+      div.classList.remove('wide-aspec-ratio', 'tight-aspec-ratio');
+
+      // Check the aspect ratio and add the appropriate class
+      if (aspectRatio > 4 / 3) {
+        div.classList.add('wide-aspec-ratio');
+      } else {
+        div.classList.add('tight-aspec-ratio');
+      }
+    }
+
+    // Call the function on page load and window resize
+    window.addEventListener('load', updateDivAspectRatio);
+    window.addEventListener('resize', updateDivAspectRatio);
+
+  </script>
+
 </body>
 </html>

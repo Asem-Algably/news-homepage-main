@@ -23,7 +23,20 @@
 
 @font-face {
     font-family: inter;
-    src: url(./assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+    src: url(./assets/fonts/static/Inter-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: inter;
+    src: url(./assets/fonts/static/Inter-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: inter;
+    src: url(./assets/fonts/static/Inter-ExtraBold.ttf);
+    font-weight: 800;
 }
 
 * {
@@ -49,6 +62,7 @@ body {
 
     max-width: calc(1112px + 2 * 5.5625rem);
     padding: 5.5625rem;
+    padding-bottom: 2.4rem;
     margin-left: auto;
     margin-right: auto;
 }
@@ -82,9 +96,233 @@ nav {
     margin-bottom: 3.4375rem;
 }
 
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    grid-template-rows: 1.5fr 1fr;
+    margin-bottom: 4.0625rem;
+}
 
-/* 
-### Font
+.hero-image {
+    width: 100%;
+    background-size:cover;
+    background-position: center;
+    font-weight: var(--regular);
+}
 
-- Family: [Inter](https://fonts.google.com/specimen/Inter)
-- Weights: 400, 700, 800 */
+.wide-aspec-ratio{
+    background-image: url(./assets/images/image-web-3-desktop.jpg);
+}
+
+.tight-aspec-ratio{
+    background-image: url(./assets/images/image-web-3-mobile.jpg);
+}
+
+aside {
+    grid-column: 2/ 3;
+    grid-row: 1/ 3;
+    
+    background: var(--Very-dark-blue);
+    padding:2.4375rem 1.4375rem;
+    
+}
+
+
+aside h2 {
+    color: var(--soft-orange);
+    line-height: 100%;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 2.4375rem;
+}
+
+aside h3 {
+    color: var(--body-bg);
+    margin-bottom: 0.5rem;
+    font-weight: var(--extrabold);
+    font-size: 1.25rem;
+
+}
+
+aside h3:hover {
+    color: var(--soft-orange);
+    cursor: pointer;
+}
+
+aside p {
+    color: var(--Grayish-blue);
+    line-height: 1.625;
+    font-size: 0.9375rem;
+}
+
+.hero-section {
+    grid-row: 2/ 3;
+    grid-column: 1/2;
+    
+    display: flex;
+    gap: 1rem;
+    
+}
+
+.seprator {
+    width: 100%;
+    height: 1.5px;
+    background-color: var(--Dark-grayish-blue);
+    margin-top: 1.625rem;
+    margin-bottom: 2rem;
+}
+
+.hero-section h1 {
+    font-size: clamp(40px, 2.1478rem + 0.015023*100vw , 56px);
+    line-height: 100%;
+    font-weight: var(--extrabold);
+    color: var(--Very-dark-blue);
+    flex: 1;
+
+    /* slope: 0.015023 */
+    /* Yaxis intersection: 34.36619 */
+}
+
+.hero-copy a {
+    background-color: var(--soft-red);
+    padding: 1.0625rem 1.625rem;
+    color: var(--Very-dark-blue);
+    font-weight: var(--bold);
+    font-size: 0.875rem;
+    letter-spacing: 0.375rem;
+    text-transform: uppercase;
+    transition: all ease-in-out 0.1s;
+    display: block;
+    width: max-content;
+
+}
+
+.hero-copy a:hover {
+    background-color: var(--Very-dark-blue);
+    color: var(--Grayish-blue);
+}
+
+.hero-copy p {
+    /* margin-bottom: 1rem; */
+    color: var(--Dark-grayish-blue);
+    margin-bottom: 1.5rem;
+    font-weight: var(--regular);
+    font-size: 0.9375rem;
+    line-height: 1.625rem;
+}
+
+.hero-copy {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cards-holder {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 4.5rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    display: flex;
+    gap: 1.5rem;
+    min-width: 21rem;
+}
+
+.card img {
+    height: 7.9375rem;
+    align-self: stretch;
+}
+
+.card-index {
+    color: var(--soft-red);
+    font-weight: var(--bold);
+    font-size: 2.125rem;
+    margin-bottom: 0.8125rem;
+}
+
+.card-copy h3{
+    font-family: var(--extrabold);
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+    margin-bottom: 0.25rem;
+}
+
+.card-copy h3:hover {
+    color: var(--soft-red);
+}
+
+.card-copy p {
+    color: var(--Dark-grayish-blue);
+    font-size: 0.9375rem;
+    line-height: 1.625rem;
+}
+
+@media (max-width: 910px) {
+
+    .hero-section {
+        flex-direction: column;
+    }
+    
+}
+
+@media (max-width: 800px) {
+
+    main {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(3, auto);
+        margin-bottom: 4rem;
+        gap: 0px;
+    }
+
+    aside {
+        grid-row: 3/4;
+        grid-column: 1 / 2;
+    }
+
+    nav {
+        margin-bottom: 2rem;
+    }
+
+    .hero-image {
+        min-height: 20rem;
+        width: 100%;
+        margin-bottom: 4rem;
+    }
+
+    .hero-section{
+        margin-bottom: 4rem;
+    }
+
+    .cards-holder {
+        margin-bottom: 4rem;
+    }
+
+    
+}
+
+@media (max-width: 850px) {
+
+    .wraper {
+        padding: 1.75rem 1rem;
+    }
+    
+}
+
+@media (max-width: 700px) {
+
+    ul {
+        display: none;
+    }
+    
+}
+
+@media (max-width: 450px){
+    .hero-image{
+        aspect-ratio: 4 / 3;
+    }
+}
