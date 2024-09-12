@@ -46,11 +46,40 @@ body {
 }
 
 .wraper {
-    
+
     max-width: calc(1112px + 2 * 5.5625rem);
     padding: 5.5625rem;
     margin-left: auto;
     margin-right: auto;
+}
+
+nav {
+    display: flex;
+    flex: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    flex: auto;
+    justify-content: space-between;
+    gap: .5rem;
+}
+
+.nav_menu a {
+    padding: 1rem;
+    font-size: 0.9375rem;
+    font-weight: var(--regular);
+    color: var(--Dark-grayish-blue);
+}
+
+.nav_menu a:hover {
+   color: var(--soft-red);
+}
+
+nav {
+    margin-bottom: 3.4375rem;
 }
 
 
