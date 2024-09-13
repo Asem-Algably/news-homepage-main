@@ -21,14 +21,19 @@
     <nav>
       <img src="./assets/images/logo.svg" alt="site logo" class="logo">
       <div class="nav_menu">
-        <div class="hamburger_menu"></div>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">New</a></li>
-          <li><a href="#">Popular</a></li>
-          <li><a href="#">Trending</a></li>
-          <li><a href="#">Categories</a></li>
+        <div class="nav-background"></div>
+        <ul class="nav-list">
+          <li><a href="#" class="nav-link">Home</a></li>
+          <li><a href="#" class="nav-link">New</a></li>
+          <li><a href="#" class="nav-link">Popular</a></li>
+          <li><a href="#" class="nav-link">Trending</a></li>
+          <li><a href="#" class="nav-link">Categories</a></li>
         </ul>
+        <div class="hamburger_menu">
+          <div class="ham-slice first-slice"></div>
+          <div class="ham-slice second-slice"></div>
+          <div class="ham-slice third-slice"></div>
+        </div>
       </div>
     </nav>
   <main>
@@ -103,7 +108,7 @@
       div.classList.remove('wide-aspec-ratio', 'tight-aspec-ratio');
 
       // Check the aspect ratio and add the appropriate class
-      if (aspectRatio > 4 / 3) {
+      if (aspectRatio > 3 / 2) {
         div.classList.add('wide-aspec-ratio');
       } else {
         div.classList.add('tight-aspec-ratio');
@@ -113,6 +118,35 @@
     // Call the function on page load and window resize
     window.addEventListener('load', updateDivAspectRatio);
     window.addEventListener('resize', updateDivAspectRatio);
+    
+
+    // the nav menu logic
+    const hamburger = document.querySelector(".hamburger_menu");
+    const navMenu = document.querySelector(".nav-list");
+    const background = document.querySelector(".nav-background");
+    console.log("query selected")
+
+    hamburger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+        console.log("menu is detected")
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+        background.classList.toggle("active");
+    }
+
+    // closing the menu upon clicking links
+    const navLink = document.querySelectorAll(".nav-link");
+
+    navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+    function closeMenu() {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+        background.classList.remove("active");
+    }
+
+
 
   </script>
 
