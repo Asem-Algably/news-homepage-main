@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: (https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl)
+- Solution URL: (https://www.frontendmentor.io/solutions/responsive-news-hompage-layout-with-css-grid-and-flexbox-3txw9KhJpZ)
 - Live Site URL: (https://news-homepage-main-byasemalgably.netlify.app)
 
 ## My process
