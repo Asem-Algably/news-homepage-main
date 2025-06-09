@@ -60,4 +60,4 @@ Users should be able to:
 ## Author
 
 - Frontend Mentor - [@Asem-Algably](https://www.frontendmentor.io/profile/Asem-Algably)
-- Twitter - [@Asem_Algably_UX](https://x.com/Asem_Algably_UX)
+- Twitter - [@Asem_Algably_UX](https://x.com/Asem_Algably_UX) 
